@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React JS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+<body>
+    
+<!--Barra de navegación-->
+      <nav class="navbar navbar-expand-lg navbar-dark  py-4 px-3" style="background-color: #021b5f;">
+        <div class="container-fluid">
+          <a class="navbar-brand"  href="#">React JS </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Qué es</a>
+              <a class="nav-link" href="#install">Instalación</a>
+              <a class="nav-link" href="#project">Proyecto</a>
+              <a class="nav-link" href="#files">Archivos</a>
+              <a class="nav-link disabled" href="#git" tabindex="-1" aria-disabled="true">Git</a>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+      
+<!--Qué es?-->
+<section class="pt-4 mx-4">
+<h4>Qué es?</h4>
+<p class= "lh-base">Es una librería que nos sirve para desarrollar interfaces de usuario web o clientes web, completamente dinámicas, reactivas y asíncronas con el servidor (todo irá por Ajax). Es decir que vamos a desarrollar una web en el lado del cliente, un front-end. Y este front-end lo que va a estar haciendo es consultar a un back-end o directamente funcionar en el front-end de manera muy dinámica. Y todo es completamente reactivo, es decir, yo hago un cambio en una propiedad de un componente y automáticamente ese cambio que hago en esa propiedad se muestra de manera instantánea en la vista o en lo que el usuario está viendo. Es para hacer aplicaciones single page, aplicaciones SPA.</p>
+
+<!--Instalación-->
+<h4 id="install">Instalación</h4>
+<ul>
+    <li class="pt-2">Instalar Node.js</li>    <p>Entrar a la página de <code>nodejs.org</code> . La más recomendable a largo plazo es la LTS. Descargar archivo .msi</p>
+    <li>Actualizar npm</li>    <p>npm es el gestor de paquetes de Nodejs, que nos sirve para bajarnos las diferentes dependencias, librerías y paquetes de JavaScript.<br/>En git bash: <code>npm install -g npm@latest</code> hace una actualización global. Esto nos va a permitir instalar luego React.<br/>Hacemos <code>npm --version</code></p>
+    <li>Borrar la caché de npm</li>    <p><code>npm cache clean --force</code> Porque si no borramos esta caché es posible que se nos descarguen versiones más antiguas a la actual que haya de React, entonces es recoendable siempre tener la caché limpia.<br/><code>clear</code> (cls en windows) limpia la consola</p>
+    <li>Create React App</li>   <p><code>https://github.com/facebook/create-react-app</code><br/>Con este paquete, este módulo de Node, es un intérprete de consola, de cli. Nos va a permitir instalar React muy fácilmente e incluirá webpack para la compilación y minificación del proyecto. Además incluye un Live Reload, para que cuando yo haga un cambio de código, automáticamente se me compile, la pantalla se refrezque. Nos va a proporcionar la estructura básica de un proyecto de React. Permitirá hacer paquetes para producción y un montón de cosas. <strong>Esto sería lo equivalente a Angular cli</strong>. En todos los frameworks siempre hay un paquete de este tipo, un intérprete de consola.<br/>Hacemos <code>npm install -g create-react-app</code></br8></p>
+</ul>
+
+<!--Generar el proyecto-->
+<div class="clearfix">
+  <div class="col-md-3 float-md-end mb-3 ms-md-3" alt="...;"> 
+    <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 22.3rem; margin: 0px 10px 15px -30px;">
+      <img src="reactJSsmall.png" >
+        <div class="card-body">
+          <p class="card-text">Local: <code>http://localhost:3000</code><br/>On Your Network: <code>http://192.168.0.233:3000</code></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <h4 id="project">Generar el proyecto</h4>
+    <p>En git bash, dentro de la carpeta donde se va a crear el directorio: <code>create-react-app aprendiendo-react</code>  (el nombre de directorio no puede contener letras mayúsculas). Luego se puede cambiar a Camel Case.<br/>Si se quiere, agregarle alguna letra mayúscula al nombre del directorio que se creó.<br/>Entrar al directorio que se creó. Ejecutar ahí: <code>npm start</code> para que se ejecute en el servidor local, me compile todo y yo pueda probarlo en el navegador. <strong>Dejar corriendo el npm start</strong> en git bash mientras estemos trabajando con el proyecto.<br/>Si nos situamos fuera del directorio: en git bash <code>dir</code> nos muestra las carpetas que hay. Luego ponemos <code>cd</code> y el nombre de la carpeta a la cual queremos entrar.<br/>En ese último directorio creado ponemos: <code>npm start</code> y esperamos a que nos cargue el servidor web local. En Windows 7 me dio error una parte que no se carga porque no está instalado PowerShell. En git el nombre del directorio se ve en minúscula porque así fue cargado en <code>package.json</code>, que no me permite poner Camel Case. En package.json tenemos todas las dependencias que trae por defecto.<br/>Git me devuelve dónde me está corriendo el servidor local. Copio esa url (que se encuentra en la imagen de la derecha) y la pego en el navegador.<br/></p></div>
+</div>
+
+<!--Explicación de los archivos del directorio -->
+<h4 id="files">Archivos</h4>
+
+  
+
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        src
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">        <strong></strong>
+        <ul><ul>
+    <li class="pt-2"><h5>App.css</h5>
+      <p></p>
+    </li>
+    <li><h5>App.js</h5>
+      <p>Es un componente. Que muestra básicamente todo lo que veíamos en la página inicial de React.<br/>Puedo modificar el párrafo.<br/>Se actualiza la página porque tengo activo el npm start.</p>
+    </li>
+    <li><h5>App.test.js</h5>
+      <p>Fichero para hacer testing.</p>
+    </li>
+    <li><h5>index.css</h5>
+      <p></p>
+    </li>
+    <li><h5>index.js</h5>
+      <p>Cargar e importar todo lo principal de React.</p>
+    </li> 
+       <li><h5>serviceWorker.js</h5>
+      <p>Para que la aplicación también nos sirva como PWA</p>
+    </li>
+        <li><h5>package.json</h5>
+      <p>Archivo de configuración básica del proyecto<br/><ul><li>Git ignore</li>Es un fichero de git que nos sirve para: si tenemos un repositorio con este proyecto de Git, podemos añadir aeste git ignore los archivos que no queremos que se metan en el commit y que no se suban al servidor de Git. Por ej: node_modules</ul></p>
+    </li>       
+    <li><h5>ReadME</h5>
+      <p>Dónde encontrar documentación de React</p>
+    </li>
+  </ul>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--GIT--><br/><br/><br/><br/>
+    <h4 id="git">Descargar Git en su página. Eso es Git Bash.</h4>
+    <p>Git Bash: Bash es un lenguaje de comandos y shell de Unix, y es el Shell predeterminado en Linux (Ubuntu, etc.) y OS X. En términos simples, el git que se ejecuta en la terminal de cualquier dispositivo Linux se conoce como git bash.
+    <br/>Git CMD: (Símbolo de línea de comandos) es el intérprete de línea de comandos en los sistemas operativos Windows. Una especie de equivalente al terminal malo en Linux, cuando instala git en Windows y está acostumbrado a usar la línea de comandos, uno usa cmd para ejecutar comandos git. No hay ninguna diferencia en lo que respecta a los comandos git cuando usa cualquiera de los anteriores. Preferiría el terminal sobre cmd cualquier día, pero si te gusta Windows por razones convencionales, he usado Cygwin para darme el terminal como si fuera Windows.</p>
+
+
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+</body>
+</html>
